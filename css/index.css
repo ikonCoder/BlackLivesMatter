@@ -1,0 +1,182 @@
+/* GLOBAL STYLES */
+body{margin: 0; font-family: SansProLight; background-color: black !important;}
+.stripAnchorStyle{color: initial; text-decoration: none;}
+.stripAnchorStyle:hover{text-decoration: none; color: initial;}
+
+/* MAIN STYLES */
+#navContainer{
+    padding-left: 0px;
+    margin-top: 5%;
+    text-align: center;
+}
+#navItem{
+    display: inline-block;
+    margin: 0 10px;
+    color: #6C6565;
+    letter-spacing: 2px;
+    user-select: none;
+}
+#navItem:hover{
+    cursor: pointer;
+}
+.active{
+    color:#A2A2A2 !important; 
+}
+#section1, #section2{max-width: 50vw; display: inline-block; height: 100vh;}
+#section1{background-color: black; width: 50%;}
+#section2{background-color: black; width: 50%; float: right; position: relative;}
+#header{
+    color: #7b7b7b;
+    font-weight: bold;
+    font-size: 5rem;
+    margin: 0;
+    /* position: absolute; */
+    /* top: 90px; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    z-index: 200;
+    letter-spacing: 13px;
+    white-space: nowrap;
+    /* height: 11vh; */
+    text-align: center;
+}
+
+#section1Container{
+    color: white;
+    padding: 0px 100px;
+    line-height: 40px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+#uploadBtn{
+    background: #d3d3d3;
+    width: 175px;
+    height: 50px;
+    border-radius: 8px;
+    line-height: 50px;
+    box-shadow: 0px 2px 4px rgba(35,30,30,0.5);
+    position: absolute;
+    bottom: 20%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6000;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+#uploadBtn:hover{
+    cursor: pointer;
+    box-shadow: 0px 2px 13px rgba(35,30,30,0.5);
+}
+.roleText{
+    display: none;
+    font-size: 15px;
+    margin-top: 15%;
+}
+.roleLinks{
+    display: block;
+    padding: 10px;
+    color: white;
+    border: 1px solid white;
+    width: 15vw;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+a{
+    color: #6C6565 !important;
+}
+#no_justiceMsg{
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    color: #A2A2A2;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.col-sm{
+    border: solid 1px white;
+    height: 20vh;
+    margin-left: 18px;
+}
+.col-sm:hover{
+    cursor: pointer;
+}
+#theCause{
+    margin-top: 5%;
+}
+.test1{
+    background-image: url("../imgs/victims/img1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.test2{
+    background-image: url("../imgs/victims/img2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.test3{
+    background-image: url("../imgs/victims/img3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.test4{
+    background-image: url("../imgs/victims/img4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.test5{
+    background-image: url("../imgs/victims/img5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.test6{
+    background-image: url("../imgs/victims/img6.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.test7{
+    background-image: url("../imgs/victims/img2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.test8{
+    background-image: url("../imgs/victims/img1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.test9{
+    background-image: url("../imgs/victims/img3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.fancybox-slide--iframe .fancybox-content {
+    width  : 800px;
+    height : 600px !important;
+    max-width  : 50%;
+    max-height : 80%;
+    margin: 0;
+}
+
+
+.fancybox-slide--iframe .fancybox-content {
+    background: #000000 !important;
+}
+
+
+
+
+
+
+/* BREAKPOINTS */
+
+
+
+
+
+
+

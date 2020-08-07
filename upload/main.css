@@ -1,0 +1,62 @@
+body{margin: 0; font-family: SansProLight;color: #5a5a5a;}
+#container{
+    padding: 100px 100px;
+}
+#inputOne{
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    width: 50%;
+    margin-top: 55px;
+}
+#inputTwo{
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    width: 50%;
+    margin-top: 5px;
+}
+#uploadTxt{
+    color: #928e8e;
+    text-align: center;
+}
+#imgInput{
+    margin: 0 auto;
+    display: block;
+    margin-top: 5px;
+    width: 150px;
+}
+#submitBtn{
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 20px;
+    margin-top: 10%;
+}
+
+
+.fancybox-slide--iframe .fancybox-content {
+    width  : 800px;
+    height : 600px !important;
+    max-width  : 50%;
+    max-height : 80%;
+    margin: 0;
+}
+
+
+
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#file{
+    margin: 0 auto;
+    display: block;
+    width: 39%;
+    margin-top: 15px;
+    border: solid 2.05px;
+
+}
+
