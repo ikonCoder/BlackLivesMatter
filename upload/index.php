@@ -1,20 +1,20 @@
 <?php 
+session_start();
+
 include($_SERVER['DOCUMENT_ROOT']. '/blm/include/config.php');
+$_COOKIE['varname'] = 42;
+
 
 //variable that can sees all the items in the 'upload folder'
 $imgDir = $_SERVER['DOCUMENT_ROOT']. '/blm/uploads/';
-$uploadedImages = scandir($imgDir); 
+$uploadedImages = scandir($imgDir);
 
-$imgArr = array();
-
-//loop through all images in $imgDir
-for($i = 0; $i < 5; $i++){
-    array_push($imgArr, $uploadedImages[$i]); 
-    print_r($imgArr);
-}
+$_SESSION["rawImgArr"] = $uploadedImages;
 
 
 if (isset($_POST['upload'])) {
+print_r($uploadedImages);
+
 //Get image name
 $image = $_FILES['image']['name'];
   
@@ -28,11 +28,12 @@ $target =  $_SERVER['DOCUMENT_ROOT'] . "/blm/uploads/" . basename($image);
 $sql = "INSERT INTO images (image, state) VALUES ('$image', '$state')"; 
 mysqli_query($db, $sql);
 
-  if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-        $msg = "Image uploaded successfully";
-    }else{
-        $msg = "Failed to upload image";
-    }
+if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+    $msg = "Image uploaded successfully";
+
+}else{
+    $msg = "Failed to upload image";
+}
 }
 $result = mysqli_query($db, "SELECT * FROM images");
 ?>
@@ -57,9 +58,8 @@ $result = mysqli_query($db, "SELECT * FROM images");
                 <input type="file" name="image" id="file">
                 <span class="file-custom"></span>
             </label>   
-            <!-- <button type="submit" name="upload">POST</button> -->
             <input style="text-align:center; display:block; margin:0 auto; margin-top:20px;" type="submit" name="upload" value="Upload Image" >
-            <?php echo $msg ?>
+            <div style='display:block; text-align:center; color:white; margin-top:10px;'> <?php echo $msg ?> </div>
         </form>
 
         <?php

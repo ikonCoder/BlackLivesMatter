@@ -1,5 +1,8 @@
 <?php
-    // include($_SERVER['DOCUMENT_ROOT']. '/blm/upload/index.php');
+    session_start();
+
+    //converted array to json to read in DOM
+    $js_array = json_encode($_SESSION["rawImgArr"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,10 +62,7 @@
 </div>
 
 <div id="section2"> 
-    <div class="carousel js-flickity">
-        <div class="carousel-cell">
-            <img src="imgs/img1.jpg" alt="orange tree" />
-        </div>
+    <div class="carousel js-flickity" id="carousel">
     </div>
 
     <a class="stripAnchorStyle" data-fancybox data-type="iframe" data-src="upload/index.php" href="javascript:;">
@@ -114,22 +114,29 @@ function changeContent() {
     }
 }
 
-//array of images for the carosuel
-let imgLocationBase = 'uploads/';
-let imageArray = new Array();
 
+$( document ).ready(function() {
+    //imgArr converted to JSON for javascript 
+    var jsonImgArr = <?php echo $js_array ?>;
 
-// for(var i; i < imageArray; i++){
-//     imageArray.append('test');
-// }
+    //Create elements for carousel 
+    var carousel_cell_div = document.createElement("div");
+    carousel_cell_div.className = "carousel-cell-div";
+    var carousel_img_div = document.createElement("img");
+    carousel_img_div.classList.add("carousel-img-div");
 
+    //Append elements above to main carosel div
+    var element = document.getElementById("carousel");
+    element.appendChild(carousel_cell_div);
+    carousel_cell_div.appendChild(carousel_img_div);
 
+    //loop through array to create the amount of elements needed for carousel
+    for(var i = 0; i < <?php echo $js_array ?>.length; i++ ) {
+        console.log(jsonImgArr);
+    }
+});
 
-
-
-
-
-
+//Create loop for images in rawImgArr to append to 
 
 </script>
 </body>
