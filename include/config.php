@@ -1,9 +1,9 @@
 <?php
-    $host = "localhost"; 
-    $user = "root"; 
-    $password = "root"; 
-    $dbname = "db_blm"; 
-    $port = "8888";
+    $host = ""; 
+    $user = ""; 
+    $password = ""; 
+    $dbname = ""; 
+    $port = "";
     $msg = ""; 
     $row = "";
     
